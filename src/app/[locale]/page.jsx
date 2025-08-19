@@ -1,5 +1,5 @@
-import ModeToggle from "@/components/ModeToggle";
-import {useTranslations} from 'next-intl';
+import ModeToggle from '@/components/ModeToggle';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
     const t = useTranslations('HomePage');
