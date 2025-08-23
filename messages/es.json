@@ -1,6 +1,8 @@
 {
     "HomePage": {
-        "title": "Hola mundo"
+        "hello": "Hola",
+        "intro": "Soy",
+        "title": "Desarrollador web full-stack"
     },
     "Navbar": {
         "home": "Inicio",

@@ -1,5 +1,7 @@
-import { Link } from '@/i18n/navigation';
-import React from 'react';
+'use client';
+
+import { Link, usePathname } from '@/i18n/navigation';
+import React, { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
 import ModeToggle from './ModeToggle';
@@ -16,8 +18,15 @@ import { AlignJustify } from 'lucide-react';
 
 function Navbar() {
     const t = useTranslations('Navbar');
+    const [open, setOpen] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setOpen(false);
+    }, [pathname]);
+
     return (
-        <main className="flex items-center justify-between py-5 md:py-10">
+        <main className="flex items-center justify-between py-5 md:py-10 ">
             <div className="space-x-3 hidden md:block">
                 <Button asChild variant="navLinkLg">
                     <Link href="/">{t('home')}</Link>
@@ -26,14 +35,14 @@ function Navbar() {
                     <Link href="/portfolio">{t('portfolio')}</Link>
                 </Button>
                 <Button asChild variant="navLinkLg">
-                    <Link href="/about">{t('about')}</Link>
+                    <Link href="/cv">CV</Link>
                 </Button>
                 <Button asChild variant="navLinkLg">
-                    <Link href="/cv">CV</Link>
+                    <Link href="/about">{t('about')}</Link>
                 </Button>
             </div>
             <div className="md:hidden">
-                <Sheet>
+                <Sheet open={open} onOpenChange={setOpen}>
                     <SheetTrigger>
                         <AlignJustify />
                     </SheetTrigger>
@@ -50,10 +59,10 @@ function Navbar() {
                                     </Link>
                                 </Button>
                                 <Button asChild variant="navLinkSm">
-                                    <Link href="/about">{t('about')}</Link>
+                                    <Link href="/cv">CV</Link>
                                 </Button>
                                 <Button asChild variant="navLinkSm">
-                                    <Link href="">CV</Link>
+                                    <Link href="/about">{t('about')}</Link>
                                 </Button>
                             </SheetDescription>
                         </SheetHeader>

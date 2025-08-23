@@ -1,7 +1,8 @@
 {
     "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+        "hello": "Hello",
+        "intro": "I’m ",
+        "title": "Full-stack Web Developer"
     },
     "Navbar": {
         "home": "Home",

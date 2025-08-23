@@ -26,9 +26,12 @@ export default async function RootLayout({ children, params }) {
                         enableSystem
                         disableTransitionOnChang
                     >
-                        <main className="w-full min-h-screen max-w-[1400px] mx-auto px-5">
-                            <Navbar />
-                            {children}
+                        <main className="w-full min-h-screen bg-[url('/images/main-pic-light.png')] dark:bg-[url('/images/main-pic-dark.png')] transition-all duration-150 bg-no-repeat bg-cover bg-center">
+                            {/* <div className="absolute inset-0 backdrop-blur-xs"></div> */}
+                            <div className="w-full h-full max-w-[1400px] mx-auto px-5 z-10 relative">
+                                <Navbar />
+                                {children}
+                            </div>
                         </main>
                     </ThemeProvider>
                 </NextIntlClientProvider>
