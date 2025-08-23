@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './globals.css';
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
     title: 'Create Next App',
@@ -25,7 +26,10 @@ export default async function RootLayout({ children, params }) {
                         enableSystem
                         disableTransitionOnChang
                     >
-                        {children}
+                        <main className="w-full min-h-screen max-w-[1400px] mx-auto px-5">
+                            <Navbar />
+                            {children}
+                        </main>
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>

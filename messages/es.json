@@ -1,5 +1,15 @@
 {
     "HomePage": {
         "title": "Hola mundo"
+    },
+    "Navbar": {
+        "home": "Inicio",
+        "portfolio": "Portafolio",
+        "about": "Sobre mí",
+        "menu": "Menú"
+    },
+    "notFound": {
+        "message": "La página que buscas no existe.",
+        "backHome": "Volver al inicio"
     }
 }

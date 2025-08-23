@@ -2,5 +2,15 @@
     "HomePage": {
         "title": "Hello world!",
         "about": "Go to the about page"
+    },
+    "Navbar": {
+        "home": "Home",
+        "portfolio": "Portfolio",
+        "about": "About me",
+        "menu": "Menu"
+    },
+    "notFound": {
+        "message": "The page you’re looking for doesn’t exist.",
+        "backHome": "Back to Home"
     }
 }
