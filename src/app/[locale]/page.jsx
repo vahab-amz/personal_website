@@ -21,10 +21,18 @@ export default function Home() {
                     {t('title')}
                 </h1>
                 <div className="flex justify-center space-x-3 mt-10">
-                    <Button asChild variant="outline" className='dark:border-red-600'>
+                    <Button
+                        asChild
+                        variant="outline"
+                        className="dark:border-red-600"
+                    >
                         <Link href="/cv">CV</Link>
                     </Button>
-                    <Button asChild variant="outline" className='dark:border-red-600'>
+                    <Button
+                        asChild
+                        variant="outline"
+                        className="dark:border-red-600"
+                    >
                         <Link href="/about">{tt('about')}</Link>
                     </Button>
                 </div>
