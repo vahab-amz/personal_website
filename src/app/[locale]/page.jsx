@@ -8,8 +8,8 @@ export default function Home() {
     const tt = useTranslations('Navbar');
 
     return (
-        <main className="bg-[url('/images/main-pic-light.png')] dark:bg-[url('/images/main-pic-dark.png')] transition-all duration-150 bg-no-repeat bg-cover bg-center p-20 absolute left-0 top-0 w-full h-full ">
-            <div className="md:p-20 mt-10 md:mt-0 h-full backdrop-blur-xs dark:backdrop-blur-none">
+        <main className="bg-[url('/images/main-pic-light.png')] dark:bg-[url('/images/main-pic-dark.png')] transition-all duration-150 bg-no-repeat bg-cover bg-center absolute left-0 top-0 w-full h-full ">
+            <div className="p-10 md:p-20 mt-20 md:mt-0 h-full backdrop-blur-xs dark:backdrop-blur-none">
                 <div className="max-w-[1400px] mx-auto  motion-preset-slide-right motion-duration-1000 motion-ease-in-out ">
                     <h1 className="text-8xl font-extrabold">
                         {t('hello')}

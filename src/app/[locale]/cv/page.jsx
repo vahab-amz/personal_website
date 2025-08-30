@@ -65,7 +65,7 @@ function Cv() {
                                 LinkedIn
                             </a>
                         </div>
-                        <div className="flex items-center gap-2 mt-2 md:mt-3 text-muted-foreground">
+                        <div className="flex items-center gap-2 md:mt-3 text-muted-foreground">
                             <MapPin className="size-4" />
                             <span>Barcelona, Spain</span>
                         </div>
@@ -302,7 +302,7 @@ function useInViewOnce(ref, options = { threshold: 0.15 }) {
     const [inView, setInView] = useState(false);
 
     useEffect(() => {
-        if (!ref.current || inView) return; // فقط یک‌بار
+        if (!ref.current || inView) return;
         const io = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setInView(true);
