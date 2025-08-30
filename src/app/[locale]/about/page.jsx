@@ -8,7 +8,9 @@ function AboutMe() {
 
     return (
         <main className="p-5">
-            <h1 className="text-red-600 text-5xl font-bold intersect-once intersect:motion-preset-slide-up">{t('aboutMe')}</h1>
+            <h1 className="text-red-600 text-5xl font-bold intersect-once intersect:motion-preset-slide-up">
+                {t('aboutMe')}
+            </h1>
             <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-[45%] mt-4 p-5">
                     <p className="text-lg intersect-once intersect:motion-preset-slide-up">
