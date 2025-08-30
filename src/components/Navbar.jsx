@@ -26,7 +26,7 @@ function Navbar() {
     }, [pathname]);
 
     return (
-        <main className="flex items-center justify-between py-5 md:py-10 ">
+        <main className="flex items-center justify-between py-5 md:py-10 z-10 relative backdrop-blur-xs dark:backdrop-blur-none">
             <div className="space-x-3 hidden md:block">
                 <Button asChild variant="navLinkLg">
                     <Link href="/">{t('home')}</Link>

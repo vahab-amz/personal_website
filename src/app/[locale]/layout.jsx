@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import { Toaster } from '@/components/ui/sonner';
+import ObserverProvider from './ObserverProvider';
 
 export const metadata = {
     title: 'Create Next App',
@@ -18,7 +20,7 @@ export default async function RootLayout({ children, params }) {
 
     return (
         <html lang={locale} suppressHydrationWarning>
-            <body>
+            <body className="relative">
                 <NextIntlClientProvider>
                     <ThemeProvider
                         attribute="class"
@@ -26,12 +28,11 @@ export default async function RootLayout({ children, params }) {
                         enableSystem
                         disableTransitionOnChang
                     >
-                        <main className="w-full min-h-screen bg-[url('/images/main-pic-light.png')] dark:bg-[url('/images/main-pic-dark.png')] transition-all duration-150 bg-no-repeat bg-cover bg-center">
+                        <main className="w-full min-h-screen max-w-[1400px] mx-auto px-5 z-10">
                             {/* <div className="absolute inset-0 backdrop-blur-xs"></div> */}
-                            <div className="w-full h-full max-w-[1400px] mx-auto px-5 z-10 relative">
-                                <Navbar />
-                                {children}
-                            </div>
+                            <Navbar />
+                            <ObserverProvider>{children}</ObserverProvider>
+                            <Toaster />
                         </main>
                     </ThemeProvider>
                 </NextIntlClientProvider>

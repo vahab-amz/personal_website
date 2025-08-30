@@ -1,7 +1,39 @@
+import ContactForm from '@/components/ContactForm';
+import { Minus } from 'lucide-react';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
-function page() {
-    return <div>about me</div>;
+function AboutMe() {
+    const t = useTranslations('aboutMePage');
+
+    return (
+        <main className="p-5">
+            <h1 className="text-red-600 text-5xl font-bold ">{t('aboutMe')}</h1>
+            <div className="flex flex-col md:flex-row">
+                <div className="w-full md:w-[45%] mt-4 p-5">
+                    <p className="text-lg intersect-once intersect:motion-preset-slide-up">
+                        {t('title')}
+                    </p>
+                </div>
+                <div className="w-[80%] h-[200px] md:w-[55%] intersect-once intersect:motion-preset-slide-up"></div>
+            </div>
+            <div className="flex justify-center">
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+                <Minus size="60px" color="red" />
+            </div>
+            <div className="w-full flex justify-center mb-20">
+                <ContactForm />
+            </div>
+        </main>
+    );
 }
 
-export default page;
+export default AboutMe;

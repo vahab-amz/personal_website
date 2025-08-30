@@ -13,5 +13,44 @@
     "notFound": {
         "message": "The page you’re looking for doesn’t exist.",
         "backHome": "Back to Home"
+    },
+    "CvPage": {
+        "mySkill": "My Skills",
+        "otherSkill": "Other Skill",
+        "language": "Language",
+        "fastLearner": "Fast Learner",
+        "hardworking": "Hardworking",
+        "teamwork": "Teamwork",
+        "multiTask": "Multi-task",
+        "strategicPlanning": "Strategic Planning",
+        "marketing": "Marketing",
+        "socialMedia": "Social Media",
+        "networkingCommunication": "Networking & Communication",
+        "multicultural": "Multicultural",
+        "persian": "Persian (Native)",
+        "english": "English",
+        "spanish": "Spanish",
+        "aboutMe": "About Me",
+        "myEducation": "My Education",
+        "workExperience": "Work Experience",
+        "aboutMeContext": "I am a passionate Full-Stack Web Developer with a background in modern frameworks like Next.js, React, and Tailwind CSS. I studied Web Application Development (DAW) at Ilerna in Barcelona, where I gained solid experience in Java, Spring Boot, MySQL, Vue.js, and PHP. After completing my studies, I continued learning on my own through self-study, focusing on React, Next.js, and TypeScript to strengthen my skills and keep up with the latest technologies. I enjoy working in multicultural environments, learning quickly, and collaborating with teams to turn ideas into functional and user-friendly digital products.",
+        "myEducationContext": "During my two–year Higher Vocational Degree in Web Application Development at Ilerna, I built a strong technical foundation across both frontend and backend technologies. I gained hands-on experience with Java, developing backend services using Spring Boot, and working with MySQL databases for data modeling and persistence. On the frontend side, I worked with Vue.js to build interactive user interfaces, and also developed projects using PHP for server-side applications. This training allowed me to strengthen my problem-solving skills and apply industry-relevant tools to deliver efficient and reliable web solutions.",
+        "workExperienceContext": "During my internship at Regalexia (Kidson S.L.), I collaborated with the development team on migrating the company’s website from WordPress to a React-based architecture. I contributed to building reusable components, integrating APIs, and optimizing performance to ensure a smooth transition. My responsibilities included implementing responsive UI elements, refactoring legacy code, and assisting in adapting the new stack to the company’s business requirements.",
+        "intership": "Intership",
+        "degree": "Higher Vocational Degree",
+        "daw": "Web Application Development"
+    },
+    "aboutMePage": {
+        "aboutMe": "About Me",
+        "title": " Hi! I’m originally from Iran, and I’ve been living in Barcelona for the past three years. I recently finished my studies and can finally say I’m a Full Stack Developer—something I’m really proud of! For me, coding isn’t just work; it’s something I truly enjoy. Every new technology I learn feels like opening a new door, and that excitement keeps me motivated. While many people don’t like spending hours in front of a screen, for me, it’s where I feel most inspired. Learning, building, and improving every day—that’s what drives me. I’m now looking forward to contributing to meaningful projects, growing as a developer, and turning ideas into reality",
+        "formTitle": "Contact me",
+        "name": "Name",
+        "email": "Email",
+        "message": "Your Message",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "messageRequired": "Message is required",
+        "send": "Send",
+        "sendLoading": "Sending..."
     }
 }

@@ -13,5 +13,44 @@
     "notFound": {
         "message": "La página que buscas no existe.",
         "backHome": "Volver al inicio"
+    },
+    "CvPage": {
+        "mySkill": "Mis Habilidades",
+        "otherSkill": "Otra Habilidad",
+        "language": "Idioma",
+        "fastLearner": "Aprendiz rápido",
+        "hardworking": "Trabajador/a",
+        "teamwork": "Trabajo en equipo",
+        "multiTask": "Multitarea",
+        "strategicPlanning": "Planificación estratégica",
+        "marketing": "Marketing",
+        "socialMedia": "Redes sociales",
+        "networkingCommunication": "Red de contactos y comunicación",
+        "multicultural": "Multicultural",
+        "persian": "Persa (Nativo)",
+        "english": "Inglés",
+        "spanish": "Español",
+        "aboutMe": "Sobre mí",
+        "myEducation": "Mi formación",
+        "workExperience": "Experiencia laboral",
+        "aboutMeContext": "Soy un desarrollador web Full-Stack apasionado, con experiencia en frameworks modernos como Next.js, React y Tailwind CSS. Estudié Desarrollo de Aplicaciones Web (DAW) en Ilerna, Barcelona, donde adquirí una experiencia sólida en Java, Spring Boot, MySQL, Vue.js y PHP. Tras finalizar mis estudios, seguí formándome de manera autodidacta, centrándome en React, Next.js y TypeScript para reforzar mis habilidades y mantenerme al día con las últimas tecnologías. Disfruto trabajar en entornos multiculturales, aprender con rapidez y colaborar en equipo para convertir ideas en productos digitales funcionales y fáciles de usar.",
+        "myEducationContext": "Durante mis dos años de Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web en Ilerna, construí una base técnica sólida tanto en tecnologías de frontend como de backend. Adquirí experiencia práctica con Java, desarrollando servicios backend con Spring Boot y trabajando con bases de datos MySQL para el modelado y la persistencia de datos. En el lado frontend, trabajé con Vue.js para crear interfaces de usuario interactivas, y también desarrollé proyectos utilizando PHP para aplicaciones del lado del servidor. Esta formación me permitió reforzar mis habilidades de resolución de problemas y aplicar herramientas relevantes de la industria para ofrecer soluciones web eficientes y fiables.",
+        "workExperienceContext": "Durante mis prácticas en Regalexia (Kidson S.L.), colaboré con el equipo de desarrollo en la migración de la página web de la empresa desde WordPress a una arquitectura basada en React. Contribuí en la construcción de componentes reutilizables, la integración de APIs y la optimización del rendimiento para garantizar una transición fluida. Mis responsabilidades incluyeron implementar interfaces de usuario responsivas, refactorizar código heredado y apoyar en la adaptación del nuevo stack a las necesidades del negocio.",
+        "intership": "Prácticas",
+        "degree": "Ciclo Formativo de Grado Superior",
+        "daw": "Desarrollo de Aplicación Web"
+    },
+    "aboutMePage": {
+        "aboutMe": "Sobre mí",
+        "title": "¡Hola! Soy originario de Irán y llevo tres años viviendo en Barcelona. Recientemente terminé mis estudios y por fin puedo decir que soy Full Stack Developer, algo de lo que estoy muy orgulloso. Para mí, programar no es solo trabajo; es algo que realmente disfruto. Cada nueva tecnología que aprendo es como abrir una nueva puerta, y esa emoción me mantiene motivado. Mientras que a muchas personas no les gusta pasar horas frente a una pantalla, para mí es donde me siento más inspirado. Aprender, construir y mejorar cada día: eso es lo que me impulsa. Ahora estoy deseando contribuir a proyectos significativos, crecer como desarrollador y convertir ideas en realidad.",
+        "formTitle": "Contáctame",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Tu mensaje",
+        "nameRequired": "El nombre es obligatorio",
+        "emailRequired": "El correo electrónico es obligatorio",
+        "messageRequired": "El mensaje es obligatorio",
+        "send": "Enviar",
+        "sendLoading": "Enviando..."
     }
 }

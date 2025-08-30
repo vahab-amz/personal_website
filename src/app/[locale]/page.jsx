@@ -8,35 +8,39 @@ export default function Home() {
     const tt = useTranslations('Navbar');
 
     return (
-        <div className="p-20">
-            <h1 className="text-8xl font-extrabold">
-                {t('hello')}
-                <span className="text-red-600">.</span>{' '}
-            </h1>
-            <h1 className="text-4xl font-semibold flex items-center">
-                <Minus size="60px" color="red" /> {t('intro')} VAHAB
-            </h1>
-            <div className="inline-block">
-                <h1 className="text-2xl font-semibold tracking-[5px] mb-4">
-                    {t('title')}
-                </h1>
-                <div className="flex justify-center space-x-3 mt-10">
-                    <Button
-                        asChild
-                        variant="outline"
-                        className="dark:border-red-600"
-                    >
-                        <Link href="/cv">CV</Link>
-                    </Button>
-                    <Button
-                        asChild
-                        variant="outline"
-                        className="dark:border-red-600"
-                    >
-                        <Link href="/about">{tt('about')}</Link>
-                    </Button>
+        <main className="bg-[url('/images/main-pic-light.png')] dark:bg-[url('/images/main-pic-dark.png')] transition-all duration-150 bg-no-repeat bg-cover bg-center p-20 absolute left-0 top-0 w-full h-full ">
+            <div className="md:p-20 mt-10 md:mt-0 h-full backdrop-blur-xs dark:backdrop-blur-none">
+                <div className="max-w-[1400px] mx-auto  motion-preset-slide-right motion-duration-1000 motion-ease-in-out ">
+                    <h1 className="text-8xl font-extrabold">
+                        {t('hello')}
+                        <span className="text-red-600">.</span>
+                    </h1>
+                    <h1 className="text-4xl font-semibold flex items-center">
+                        <Minus size="60px" color="red" /> {t('intro')} VAHAB
+                    </h1>
+                    <div className="inline-block">
+                        <h1 className="text-2xl font-semibold tracking-[5px] mb-4">
+                            {t('title')}
+                        </h1>
+                        <div className="flex justify-center space-x-3 mt-10 ">
+                            <Button
+                                asChild
+                                variant="outline"
+                                className="dark:border-red-600"
+                            >
+                                <Link href="/cv">CV</Link>
+                            </Button>
+                            <Button
+                                asChild
+                                variant="outline"
+                                className="dark:border-red-600"
+                            >
+                                <Link href="/about">{tt('about')}</Link>
+                            </Button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
