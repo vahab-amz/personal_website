@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
