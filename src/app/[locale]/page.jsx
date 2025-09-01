@@ -3,14 +3,22 @@ import { Minus } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+export const dynamic = 'force-static';
+
+export const metadata = {
+    title: 'Vahab Azimzadeh – Full-Stack Developer',
+    description:
+        'Explore my portfolio, skills, and experience as a Full-Stack Developer based in Barcelona. Specialized in Next.js, React, Tailwind CSS.',
+};
+
 export default function Home() {
     const t = useTranslations('HomePage');
     const tt = useTranslations('Navbar');
 
     return (
         <main className="bg-[url('/images/main-pic-light.png')] dark:bg-[url('/images/main-pic-dark.png')] transition-all duration-150 bg-no-repeat bg-cover bg-center absolute left-0 top-0 w-full h-full ">
-            <div className="p-10 md:p-20 mt-20 md:mt-0 h-full backdrop-blur-xs dark:backdrop-blur-none">
-                <div className="max-w-[1400px] mx-auto  motion-preset-slide-right motion-duration-1000 motion-ease-in-out ">
+            <div className="p-10 pt-30 md:p-40 md:pt-40 h-full backdrop-blur-xs dark:backdrop-blur-none">
+                <div className="max-w-[1400px] mx-auto motion-preset-slide-right motion-duration-1000 motion-ease-in-out ">
                     <h1 className="text-8xl font-extrabold">
                         {t('hello')}
                         <span className="text-red-600">.</span>
