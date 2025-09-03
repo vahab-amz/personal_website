@@ -7,13 +7,13 @@ export default function ObserverProvider({ children }) {
     const pathname = usePathname();
 
     useEffect(() => {
-        Observer.start({ rootMargin: '0px 0px -15% 0px' });
+        Observer.start({ rootMargin: '0px 0px -15% 0px', threshold: 0.1 });
         return () => Observer.stop?.();
     }, []);
 
     useEffect(() => {
         Observer.stop?.();
-        Observer.start({ rootMargin: '0px 0px -15% 0px' });
+        Observer.start({ rootMargin: '0px 0px -15% 0px', threshold: 0.1 });
     }, [pathname]);
 
     return <>{children}</>;

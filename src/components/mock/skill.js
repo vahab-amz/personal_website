@@ -9,11 +9,11 @@ export const skills = [
     },
     {
         title: 'JavaScript',
-        status: '80',
+        status: '85',
     },
     {
         title: 'Tailwind',
-        status: '80',
+        status: '85',
     },
     {
         title: 'Bootstrap',

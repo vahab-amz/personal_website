@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname, useSearchParams } from '@/i18n/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation'; // helpers ساختۀ next-intl
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,16 +11,17 @@ import {
 import { Button } from '@/components/ui/button';
 import { Languages } from 'lucide-react';
 
+const LOCALES = ['es', 'en'];
+
 export default function LanguageDropdown() {
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
-    const searchParams = useSearchParams();
+
+    const cleanPath = pathname.replace(/^\/(fa|en|es)(?=\/|$)/, '') || '/';
 
     const changeLang = (next) => {
-        const qs = searchParams.toString();
-        const href = qs ? `${pathname}?${qs}` : pathname;
-        router.replace(href, { locale: next });
+        router.replace(cleanPath, { locale: next });
     };
 
     return (
@@ -36,12 +37,12 @@ export default function LanguageDropdown() {
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => changeLang('es')}>
-                    Español {locale === 'es' && '✓'}
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLang('en')}>
-                    English {locale === 'en' && '✓'}
-                </DropdownMenuItem>
+                {LOCALES.map((l) => (
+                    <DropdownMenuItem key={l} onClick={() => changeLang(l)}>
+                        {l === 'es' ? 'Español' : 'English'}
+                        {locale === l ? ' ✓' : ''}
+                    </DropdownMenuItem>
+                ))}
             </DropdownMenuContent>
         </DropdownMenu>
     );

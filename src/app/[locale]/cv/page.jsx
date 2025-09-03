@@ -1,7 +1,7 @@
 import CvClientView from '@/components/view/CvClientView';
 import { Suspense } from 'react';
 
-export const dynamic = 'force-static';
+// export const dynamic = 'force-static';
 
 export const metadata = {
     title: 'Curriculum Vitae – Vahab Azimzadeh',

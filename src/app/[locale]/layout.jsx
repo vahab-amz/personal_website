@@ -6,7 +6,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import { Toaster } from '@/components/ui/sonner';
 import ObserverProvider from './ObserverProvider';
-import { setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 
 export const metadata = {
@@ -25,8 +25,9 @@ export default async function RootLayout({ children, params }) {
         notFound();
     }
     setRequestLocale(locale);
+    const messages = await getMessages();
     return (
-        <html lang={locale} suppressHydrationWarning>
+        <html lang={locale} messages={messages} suppressHydrationWarning>
             <body className="relative">
                 <NextIntlClientProvider>
                     <ThemeProvider

@@ -3,7 +3,7 @@ import { Minus } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-export const dynamic = 'force-static';
+// export const dynamic = 'force-static';
 
 export const metadata = {
     title: 'Vahab Azimzadeh – Full-Stack Developer',
@@ -34,14 +34,14 @@ export default function Home() {
                             <Button
                                 asChild
                                 variant="outline"
-                                className="dark:border-red-600"
+                                className="dark:border-red-600 "
                             >
                                 <Link href="/cv">CV</Link>
                             </Button>
                             <Button
                                 asChild
                                 variant="outline"
-                                className="dark:border-red-600"
+                                className="dark:border-red-600 "
                             >
                                 <Link href="/about">{tt('about')}</Link>
                             </Button>

@@ -4,7 +4,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Suspense } from 'react';
 
-export const dynamic = 'force-static';
+// export const dynamic = 'force-static';
 
 export const metadata = {
     title: 'About Me – Vahab Azimzadeh',
@@ -26,7 +26,7 @@ function AboutMe() {
                         {t('title')}
                     </p>
                 </div>
-                <div className="w-[80%] h-[200px] md:w-[55%] intersect-once intersect:motion-preset-slide-up bg-gray-500 rounded"></div>
+                <div className="w-[80%] h-[200px] md:w-[55%] intersect-once intersect:motion-preset-slide-up  rounded"></div>
             </div>
             <div className="flex justify-center">
                 <Minus size="60px" color="red" />

@@ -12,27 +12,38 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { otherSkills, skills } from '@/components/mock/skill';
+import CvPic from '../../../public/images/CvCover.png';
+import Image from 'next/image';
 
 function CvClientView() {
     const t = useTranslations('HomePage');
     const tt = useTranslations('CvPage');
 
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => {
-        const t = setTimeout(() => setMounted(true), 200);
-        return () => clearTimeout(t);
-    }, []);
     const baseDelay = 200;
     const stepDelay = 120;
+
+    const skillsRef = useRef(null);
+    const showSkills = useInViewOnceSkill(skillsRef, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20% 0px',
+    });
 
     return (
         <main className="mt-10">
             {/* Header */}
             <div className="flex flex-col md:flex-row">
                 <div
-                    className="order-last md:order-none w-[70%] h-[300px] md:w-[40%] bg-slate-700 mx-auto md:mx-0 mt-5 md:mt-0 rounded-xl intersect-once intersect:motion-preset-slide-up"
+                    className="order-last md:order-none flex w-[70%] h-[300px] md:w-[40%] mx-auto md:mx-0 mt-5 md:mt-0 rounded-xl intersect-once intersect:motion-preset-slide-up"
                     suppressHydrationWarning
-                />
+                >
+                    <Image
+                        src={CvPic}
+                        alt="cv-picture"
+                        sizes="100vw"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
                 <div
                     className="order-first md:order-none w-full md:w-[60%] ps-1 md:ps-5 lg:ps-10 intersect-once intersect:motion-preset-slide-up"
                     suppressHydrationWarning
@@ -92,6 +103,7 @@ function CvClientView() {
                     </h3>
 
                     <div
+                        ref={skillsRef}
                         className="mt-5 w-full md:max-w-[90%] intersect-once intersect:motion-preset-slide-up"
                         suppressHydrationWarning
                     >
@@ -116,19 +128,22 @@ function CvClientView() {
                                         <TableCell>
                                             <div className="h-[20px] w-full bg-slate-300/70 dark:bg-slate-400 overflow-hidden rounded">
                                                 <div
-                                                    className="h-full bg-slate-700 transition-[width,opacity] duration-1000 ease-out motion-reduce:transition-none"
+                                                    className="h-full bg-slate-700 origin-left transform-gpu will-change-transform
+                                                                transition-transform duration-1000 ease-out motion-reduce:transition-none"
                                                     style={{
+                                                        // GPU scaleX → روان‌تر از تغییر width
+                                                        transform: `scaleX(${showSkills ? (Number(skill.status) || 0) / 100 : 0})`,
                                                         transitionDelay: `${baseDelay + i * stepDelay}ms`,
-                                                        width: mounted
-                                                            ? `${skill.status}%`
-                                                            : '0%',
-                                                        opacity: mounted
+                                                        opacity: showSkills
                                                             ? 1
                                                             : 0.2,
                                                     }}
-                                                    aria-label={`${skill.title} ${skill.status}%`}
                                                     role="progressbar"
-                                                    aria-valuenow={skill.status}
+                                                    aria-label={`${skill.title} ${skill.status}%`}
+                                                    aria-valuenow={
+                                                        Number(skill.status) ||
+                                                        0
+                                                    }
                                                     aria-valuemin={0}
                                                     aria-valuemax={100}
                                                 />
@@ -291,7 +306,7 @@ function SectionTitle({ children }) {
 
 function LangRow({ label, filled = 0, total = 7, start = 0 }) {
     const anchorRef = useRef(null);
-    const show = useInViewOnce(anchorRef, { threshold: 0.2 });
+    const show = useInViewOnceLang(anchorRef, { threshold: 0.2 });
 
     const dots = Array.from({ length: total });
 
@@ -333,7 +348,7 @@ function LangRow({ label, filled = 0, total = 7, start = 0 }) {
     );
 }
 
-function useInViewOnce(ref, options = { threshold: 0.15 }) {
+function useInViewOnceLang(ref, options = { threshold: 0.15 }) {
     const [inView, setInView] = useState(false);
 
     useEffect(() => {
@@ -348,6 +363,29 @@ function useInViewOnce(ref, options = { threshold: 0.15 }) {
         return () => io.disconnect();
     }, [ref, inView, options.threshold]);
 
+    return inView;
+}
+
+function useInViewOnceSkill(
+    ref,
+    { threshold = 0.15, rootMargin = '0px 0px -15% 0px' } = {},
+) {
+    const [inView, setInView] = useState(false);
+    useEffect(() => {
+        const el = ref.current;
+        if (!el || inView) return;
+        const io = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setInView(true);
+                    io.unobserve(entry.target);
+                }
+            },
+            { threshold, rootMargin },
+        );
+        io.observe(el);
+        return () => io.disconnect();
+    }, [ref, inView, threshold, rootMargin]);
     return inView;
 }
 
