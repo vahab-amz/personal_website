@@ -38,7 +38,8 @@
         "workExperienceContext": "Durante mis prácticas en Regalexia (Kidson S.L.), colaboré con el equipo de desarrollo en la migración de la página web de la empresa desde WordPress a una arquitectura basada en React. Contribuí en la construcción de componentes reutilizables, la integración de APIs y la optimización del rendimiento para garantizar una transición fluida. Mis responsabilidades incluyeron implementar interfaces de usuario responsivas, refactorizar código heredado y apoyar en la adaptación del nuevo stack a las necesidades del negocio.",
         "intership": "Prácticas",
         "degree": "Ciclo Formativo de Grado Superior",
-        "daw": "Desarrollo de Aplicación Web"
+        "daw": "Desarrollo de Aplicación Web",
+        "download_cv": "Descargar CV"
     },
     "aboutMePage": {
         "aboutMe": "Sobre mí",

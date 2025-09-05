@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { MapPin, Minus } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import {
     Table,
     TableBody,
@@ -14,10 +14,12 @@ import {
 import { otherSkills, skills } from '@/components/mock/skill';
 import CvPic from '../../../public/images/CvCover.png';
 import Image from 'next/image';
+import { Button } from '../ui/button';
 
 function CvClientView() {
     const t = useTranslations('HomePage');
     const tt = useTranslations('CvPage');
+    const locale = useLocale();
 
     const baseDelay = 200;
     const stepDelay = 120;
@@ -62,25 +64,58 @@ function CvClientView() {
                     </h2>
 
                     <div className="ps-4 mt-4 flex justify-between md:block">
-                        <div className="space-x-4">
-                            <a
-                                href="https://github.com/vahab-amz"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-red-500 transition-colors"
-                                aria-label="GitHub profile"
-                            >
-                                GitHub
-                            </a>
-                            <a
-                                href="https://linkedin.com/in/vahab-azimzadeh-sadeghi-a10097247"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-red-500 transition-colors"
-                                aria-label="LinkedIn profile"
-                            >
-                                LinkedIn
-                            </a>
+                        <div className="flex items-center space-x-20">
+                            <div className="space-x-4">
+                                <a
+                                    href="https://github.com/vahab-amz"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-red-500 transition-colors"
+                                    aria-label="GitHub profile"
+                                >
+                                    GitHub
+                                </a>
+                                <a
+                                    href="https://linkedin.com/in/vahab-azimzadeh-sadeghi-a10097247"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-red-500 transition-colors"
+                                    aria-label="LinkedIn profile"
+                                >
+                                    LinkedIn
+                                </a>
+                            </div>
+                            <div>
+                                {locale === 'es' ? (
+                                    <Button asChild variant="destructive">
+                                        <a
+                                            href="/cv/CV_VahabAzimzadehSadeghi_EN.pdf"
+                                            download
+                                            aria-label="Download CV (PDF)"
+                                        >
+                                            {
+                                                tt(
+                                                    'download_cv'
+                                                )
+                                            }
+                                        </a>
+                                    </Button>
+                                ) : (
+                                    <Button asChild variant="destructive">
+                                        <a
+                                            href="/cv/CV_VahabAzimzadehSadeghi_EN.pdf"
+                                            download
+                                            aria-label="Download CV (PDF)"
+                                        >
+                                            {
+                                                tt(
+                                                    'download_cv'
+                                                )
+                                            }
+                                        </a>
+                                    </Button>
+                                )}
+                            </div>
                         </div>
                         <div className="flex items-center gap-2 md:mt-3 text-muted-foreground">
                             <MapPin className="size-4" />

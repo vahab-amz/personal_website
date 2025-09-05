@@ -31,9 +31,9 @@ function Navbar() {
                 <Button asChild variant="navLinkLg">
                     <Link href="/">{t('home')}</Link>
                 </Button>
-                <Button asChild variant="navLinkLg">
+                {/* <Button asChild variant="navLinkLg">
                     <Link href="/portfolio">{t('portfolio')}</Link>
-                </Button>
+                </Button> */}
                 <Button asChild variant="navLinkLg">
                     <Link href="/cv">CV</Link>
                 </Button>

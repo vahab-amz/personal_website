@@ -38,7 +38,8 @@
         "workExperienceContext": "During my internship at Regalexia (Kidson S.L.), I collaborated with the development team on migrating the company’s website from WordPress to a React-based architecture. I contributed to building reusable components, integrating APIs, and optimizing performance to ensure a smooth transition. My responsibilities included implementing responsive UI elements, refactoring legacy code, and assisting in adapting the new stack to the company’s business requirements.",
         "intership": "Intership",
         "degree": "Higher Vocational Degree",
-        "daw": "Web Application Development"
+        "daw": "Web Application Development",
+        "download_cv": "Download CV"
     },
     "aboutMePage": {
         "aboutMe": "About Me",
