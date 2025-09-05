@@ -93,11 +93,7 @@ function CvClientView() {
                                             download
                                             aria-label="Download CV (PDF)"
                                         >
-                                            {
-                                                tt(
-                                                    'download_cv'
-                                                )
-                                            }
+                                            {tt('download_cv')}
                                         </a>
                                     </Button>
                                 ) : (
@@ -107,11 +103,7 @@ function CvClientView() {
                                             download
                                             aria-label="Download CV (PDF)"
                                         >
-                                            {
-                                                tt(
-                                                    'download_cv'
-                                                )
-                                            }
+                                            {tt('download_cv')}
                                         </a>
                                     </Button>
                                 )}
