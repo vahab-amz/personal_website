@@ -53,11 +53,11 @@ function Navbar() {
                                 <Button asChild variant="navLinkSm">
                                     <Link href="/">{t('home')}</Link>
                                 </Button>
-                                <Button asChild variant="navLinkSm">
+                                {/* <Button asChild variant="navLinkSm">
                                     <Link href="/portfolio">
                                         {t('portfolio')}
                                     </Link>
-                                </Button>
+                                </Button> */}
                                 <Button asChild variant="navLinkSm">
                                     <Link href="/cv">CV</Link>
                                 </Button>
