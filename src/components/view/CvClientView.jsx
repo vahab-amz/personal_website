@@ -63,7 +63,7 @@ function CvClientView() {
                         {t('title')}
                     </h2>
 
-                    <div className="ps-4 mt-4 flex justify-between md:block">
+                    <div className="ps-4 mt-4 ">
                         <div className="flex items-center space-x-20">
                             <div className="space-x-4">
                                 <a
