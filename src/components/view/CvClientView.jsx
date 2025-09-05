@@ -89,7 +89,7 @@ function CvClientView() {
                                 {locale === 'es' ? (
                                     <Button asChild variant="destructive">
                                         <a
-                                            href="/cv/CV_VahabAzimzadehSadeghi_EN.pdf"
+                                            href="/cv/CV_VahabAzimzadehSadeghi_ES.pdf"
                                             download
                                             aria-label="Download CV (PDF)"
                                         >
