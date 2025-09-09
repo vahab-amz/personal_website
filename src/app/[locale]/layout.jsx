@@ -10,7 +10,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 
 export const metadata = {
-  metadataBase: new URL('https://vahab-amz.com'), 
+    metadataBase: new URL('https://vahab-amz.com'),
 };
 
 export function generateStaticParams() {
