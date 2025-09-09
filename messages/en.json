@@ -53,5 +53,13 @@
         "messageRequired": "Message is required",
         "send": "Send",
         "sendLoading": "Sending..."
+    },
+    "metadata": {
+        "homeTitle" : "Vahab Azimzadeh – Full-Stack Developer",
+        "homeDescription" : "Explore my portfolio, skills, and experience as a Full-Stack Developer based in Barcelona. Specialized in Next.js, React, Tailwind CSS.",
+        "cvTitle" : "Curriculum Vitae – Vahab Azimzadeh",
+        "cvDescription" : "Download and view the CV of Vahab Azimzadeh, showcasing education, work experience, skills and projects as a Full-Stack Developer.",
+        "aboutTitle" : "About Me – Vahab Azimzadeh",
+        "aboutDescription" : "Learn more about my background, journey into web development, and passion for building user-friendly digital products."
     }
 }

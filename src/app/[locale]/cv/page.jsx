@@ -1,19 +1,46 @@
 import CvClientView from '@/components/view/CvClientView';
 import { Suspense } from 'react';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-// export const dynamic = 'force-static';
+export async function generateMetadata({ params: { locale } }) {
+    setRequestLocale(locale);
+    const t = await getTranslations({ locale, namespace: 'metadata' });
 
-export const metadata = {
-    title: 'Curriculum Vitae – Vahab Azimzadeh',
-    description:
-        'Download and view the CV of Vahab Azimzadeh, showcasing education, work experience, skills and projects as a Full-Stack Developer.',
+    return {
+        title: t('cvTitle'),
+        description: t('cvDescription'),
+        alternates: { canonical: `/${locale}/cv` },
+        openGraph: {
+            title: t('cvTitle'),
+            description: t('cvDescription'),
+            url: `https://vahab-amz.com/${locale}/cv`,
+            images: [`/og.png`],
+        },
+    };
+}
+
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: 'https://vahab-amz.com/cv',
+    name: 'Currículum Vitae – Vahab Azimzadeh',
+    about: {
+        '@id': 'https://vahab-amz.com/#person',
+    },
+    dateModified: '2025-09-01',
 };
 
 function Cv() {
     return (
-        <Suspense fallback={null}>
-            <CvClientView />
-        </Suspense>
+        <>
+            <Suspense fallback={null}>
+                <CvClientView />
+            </Suspense>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+        </>
     );
 }
 
