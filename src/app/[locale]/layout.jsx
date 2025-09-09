@@ -10,9 +10,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 
 export const metadata = {
-    title: 'Vahab Azimzadeh – Full-Stack Developer in Barcelona',
-    description:
-        'Portfolio and CV of Vahab Azimzadeh, a passionate Full-Stack Web Developer specialized in Next.js, React, Tailwind CSS and modern web technologies.',
+  metadataBase: new URL('https://vahab-amz.com'), 
 };
 
 export function generateStaticParams() {
