@@ -31,9 +31,12 @@ function ContactForm() {
     };
 
     return (
-        <div className="mt-10 intersect-once intersect:motion-preset-slide-up">
+        <div
+            className="mt-10 intersect-once intersect:motion-preset-slide-up"
+            suppressHydrationWarning
+        >
             <form
-                className="bg-slate-500 dark:bg-slate-800 w-[400px] p-4 rounded-lg"
+                className="bg-slate-500 dark:bg-slate-800 w-[350px] md:w-[400px] p-4 rounded-lg"
                 onSubmit={handleSubmit(onSubmitForm)}
             >
                 <h1 className="text-4xl font-bold mb-5">{t('formTitle')}</h1>

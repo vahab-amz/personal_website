@@ -60,7 +60,7 @@ export default function Home() {
                             <Minus size="60px" color="red" /> {t('intro')} VAHAB
                         </h1>
                         <div className="inline-block">
-                            <h1 className="text-2xl font-semibold tracking-[5px] mb-4">
+                            <h1 className="text-2xl font-bold dark:font-semibold tracking-[5px] mb-4">
                                 {t('title')}
                             </h1>
                             <div className="flex justify-center space-x-3 mt-10 ">

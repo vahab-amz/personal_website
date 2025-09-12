@@ -4,6 +4,8 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Suspense } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Image from 'next/image';
+import AboutPic from '../../../../public/images/AboutCover.png';
 
 export async function generateMetadata({ params: { locale } }) {
     setRequestLocale(locale);
@@ -42,17 +44,35 @@ function AboutMe() {
 
     return (
         <>
-            <main className="p-5">
-                <h1 className="text-red-600 text-5xl font-bold intersect-once intersect:motion-preset-slide-up">
-                    {t('aboutMe')}
-                </h1>
+            <main className="p-2 md:p-5">
                 <div className="flex flex-col md:flex-row">
-                    <div className="w-full md:w-[45%] mt-4 p-5">
-                        <p className="text-lg intersect-once intersect:motion-preset-slide-up">
+                    <div className="w-full md:w-[50%] p-1 md:p-5 flex flex-col justify-center">
+                        <h1
+                            className="text-red-600 text-5xl font-bold intersect-once intersect:motion-preset-slide-up"
+                            suppressHydrationWarning
+                        >
+                            {t('aboutMe')}
+                        </h1>
+                        <p
+                            className="text-lg mt-5 text-justify font-medium dark:font-normal intersect-once intersect:motion-preset-slide-up"
+                            suppressHydrationWarning
+                        >
                             {t('title')}
                         </p>
                     </div>
-                    <div className="w-[80%] h-[200px] md:w-[55%] intersect-once intersect:motion-preset-slide-up  rounded"></div>
+                    <div
+                        className="w-full md:w-[50%] mt-5 md:mt-0 intersect-once intersect:motion-preset-slide-up flex items-center"
+                        suppressHydrationWarning
+                    >
+                        <Image
+                            src={AboutPic}
+                            alt="about-picture"
+                            width={400}
+                            height="auto"
+                            className="object-cover mx-auto border-5 border-slate-500 dark:border-slate-700  rounded-2xl"
+                            priority
+                        />
+                    </div>
                 </div>
                 <div className="flex justify-center">
                     <Minus size="60px" color="red" />

@@ -35,16 +35,20 @@ function CvClientView() {
             {/* Header */}
             <div className="flex flex-col md:flex-row">
                 <div
-                    className="order-last md:order-none flex w-[70%] h-[300px] md:w-[40%] mx-auto md:mx-0 mt-5 md:mt-0 rounded-xl intersect-once intersect:motion-preset-slide-up"
+                    className="order-last md:order-none flex w-[100%] md:w-[40%] mx-auto md:mx-0 mt-5 md:mt-0 rounded-xl intersect-once intersect:motion-preset-slide-up"
                     suppressHydrationWarning
                 >
-                    <Image
-                        src={CvPic}
-                        alt="cv-picture"
-                        sizes="100vw"
-                        fill
-                        className="object-contain"
-                    />
+                    <div className="w-full max-w-[250px] md:max-w-[300px] mx-auto rounded-full overflow-hidden border-9 dark:border-slate-700">
+                        <Image
+                            src={CvPic}
+                            alt="cv-picture"
+                            sizes="100vw"
+                            width="full"
+                            height="auto"
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
                 </div>
                 <div
                     className="order-first md:order-none w-full md:w-[60%] ps-1 md:ps-5 lg:ps-10 intersect-once intersect:motion-preset-slide-up"
