@@ -30,7 +30,7 @@ export default async function RootLayout({ children, params }) {
                 <NextIntlClientProvider>
                     <ThemeProvider
                         attribute="class"
-                        defaultTheme="system"
+                        defaultTheme="dark"
                         enableSystem
                         disableTransitionOnChang
                     >
